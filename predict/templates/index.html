@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+  
+  <nav class="navbar">
+    <a href="/">Home</a>
+     <a href="/predict">Prediction</a>
+     <a>Contact</a>
+     </nav>
+     
+ <div class="container-of-contact">
+   
+     <div class="contactform">
+      <form method="post">
+             {% csrf_token %}
+             <h2>Iris Classification</h2>
+             <div class="inputbox">
+              <label>nitrogen</label><br>
+              <input type="text" name="nitrogen" required="required">
+                 
+             </div>
+             <div class="inputbox">
+              <label>phosphrous</label><br>
+                 <input type="text" name="phosphrous" required="required">
+                 
+             </div>
+             <div class="inputbox">
+              <label>potassium</label><br>
+                 <input type="text" name="potassium" required="required">
+                 
+             </div>
+             <div class="inputbox">
+              <label>ph</label><br>
+                 <input type="text" name="ph" required="required">
+              </div>
+             <div class="inputbox">
+              <label>rainfall(in cm)</label><br>
+                 <input type="text" name="rainfall" required="required">
+              </div>
+             <div class="inputbox">
+              <label>temperature</label><br>
+                 <input type="text" name="temperature" required="required">
+              </div>
+              <br>
+              
+             <button type="submit" class="button">Predict</button>
+             <br>
+             <!-- <h4>predicted output is--</h4> -->
+            </form>
+     <!-- </div>
+ </div> -->
+
+      {% if prediction == 'cotton' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>cotton</h1>
+      <img src="/static/images/cotton1.jpg" width="500" height="333">
+      {% endif %}
+     
+      {% if prediction == 'moong' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>moong</h1>
+      <img src="/static/images/moong.avif" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'sesamum' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>sesamum</h1>
+      <img src="/static/images/sessam.jpeg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'wheat' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>wheat</h1>
+      <img src="/static/images/wheat.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'sunflower' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>sunflower</h1>
+      <img src="static/images/sunflower.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'onion' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>onion</h1>
+      <img src="/static/images/onion.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'potato' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>potato</h1>
+      <img src="/static/images/potato.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'jowar' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>jowar</h1>
+      <img src="/static/images/jowar.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'rapeseed' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>rapeseed</h1>
+      <img src="/static/images/rape.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'banana' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>banana</h1>
+      <img src="/static/images/banana.webp" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'soyabean' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>soyabean</h1>
+      <img src="/static/images/soyabean.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'coriander' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>coriander</h1>
+      <img src="/static/images/coriander.webp" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'garlic' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>garlic</h1>
+      <img src="/static/images/garlic.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'arecanut' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>arecanut</h1>
+      <img src="/static/images/arecanut.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'tapioca' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>tapioca</h1>
+      <img src="/static/images/cotton1.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'jute' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>jute</h1>
+      <img src="/static/images/jute.webp" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'apple' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>apple</h1>
+      <img src="/static/images/apple.webp" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'coffee' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>coffee</h1>
+      <img src="/static/images/coffee.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'beetroot' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>beetroot</h1>
+      <img src="/static/images/beetroot.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'ginger' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>ginger</h1>
+      <img src="/static/images/ginger.webp" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'ridgegourd' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>ridgegourd</h1>
+      <img src="/static/images/ridgegourd.webp" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'pomegranate' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>pomegranate</h1>
+      <img src="/static/images/pomgranate.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'ashgourd' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>ashgourd</h1>
+      <img src="/static/images/ashgourd.gif" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'carrot' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>carrots</h1>
+      <img src="/static/images/carrots.webp" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'ragi' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>ragi</h1>
+      <img src="/static/images/ragi.webp" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'maize' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>maize</h1>
+      <img src="/static/images/maize.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'turmeric' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>turmeric</h1>
+      <img src="/static/images/turmeric.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'cashewnuts' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>cashewnuts</h1>
+      <img src="/static/images/cashewnuts.jpeg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'blackpepper' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>blackpepper</h1>
+      <img src="/static/images/black pepper.webp" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'mango' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>mangoes</h1>
+      <img src="/static/images/mangoes.webp" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'tomato' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>tomatoes</h1>
+      <img src="/static/images/tomato.jpeg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'brinjal' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>brinjals</h1>
+      <img src="/static/images/brinjal.avif" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'papaya' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>papaya</h1>
+      <img src="/static/images/papaya.jpeg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'cardamom' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>cardamom</h1>
+      <img src="/static/images/cardamom.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'ladyfinger' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>ladyfinger</h1>
+      <img src="/static/images/banana.webp" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'orange' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>orange</h1>
+      <img src="/static/images/orange.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'cabbage' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>cabbage</h1>
+      <img src="/static/images/cabage.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'pineapple' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>pineapple</h1>
+      <img src="/static/images/pineapple.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'cauliflower' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>cauliflower</h1>
+      <img src="/static/images/cauliflower.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'grapes' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>grapes</h1>
+      <img src="/static/images/grapes.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'jackfruit' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>jackfruit</h1>
+      <img src="/static/images/jackfruit.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'drumstick' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>drumstick</h1>
+      <img src="/static/images/drumstick.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'cucumber' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>cucumber</h1>
+      <img src="/static/images/cucumber.webp" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'bittergourd' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>bittergourd</h1>
+      <img src="/static/images/bittergourd.webp" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'watermelon' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>watermelons</h1>
+      <img src="/static/images/watermelons.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'blackgram' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>blackgram</h1>
+      <img src="/static/images/black-gram.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'bottlegourd' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>bottlegourd</h1>
+      <img src="/static/images/bottlegourd.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'radish ' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>radish</h1>
+      <img src="/static/images/radish.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'pumpkin' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>pumpkin</h1>
+      <img src="/static/images/pumpkin.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'barley' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>barley</h1>
+      <img src="/static/images/barley.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'sweetpotato' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>sweetpotato</h1>
+      <img src="/static/images/sweetpotato.jpg" width="500" height="333">
+      {% endif %}
+      {% if prediction == 'horsegram' %}
+      <h2>According to the conditions you should grow</h2>
+      <h1>Horsegram</h1>
+      <img src="/static/images/horse gram.jpg" width="500" height="333">
+      {% endif %}
+     
+
+
+
+    </div>
+  </div>
+
+
+
+
+
+</body>
+
+</html>
