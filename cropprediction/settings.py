@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-n1_lmx$9y0=y5bg=k*#-%_hs2wajn8^8c_^6%svxld*3pyok9v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://crop-predictions-97w7.onrender.com/']
 
 
 # Application definition
