@@ -11,7 +11,7 @@ def Predict_crop(request):
     from joblib import load
     prediction=""
     # model = pickle.load(open("D:\Desktop\django-projects\crop_prediction\cropprediction\predict\model_saved.pkl", "rb"))
-    model =load('./saved_model.joblib')
+    model =load('cropprediction/predict/saved_model.joblib')
     
     if request.method=="POST":
         ip1=float(request.POST.get('nitrogen'))
