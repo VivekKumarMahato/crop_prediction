@@ -3,4 +3,9 @@ numpy
 pandas
 gunicorn
 joblib
+streamlit
 scikit-learn
+matplotlib
+plotly
+statsmodels
+seaborn
